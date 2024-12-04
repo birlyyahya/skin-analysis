@@ -103,21 +103,34 @@
                     <div class="form-group" v-if="currentStep === 6">
                         <label>Apakah masalah Kulit yang Dialami?</label>
                         <div class="grid grid-cols-2">
-                            <label v-for="masalah in masalahKulit" :key="masalah" style="text-align: left !important; font-size:1.2em; display:flex; align-items:center; font-weight:500;">
+                            <label v-for="masalah in masalahKulit" :key="masalah"
+                                style="text-align: left !important; font-size:1.2em; display:flex; align-items:center; font-weight:500;">
                                 <input type="checkbox" :value="masalah" v-model="formData.masalahKulit" />
                                 <p>{{ masalah }}</p>
                             </label>
                         </div>
                         <!-- Kondisional pertanyaan -->
                     </div>
-                        <div v-if="formData.masalahKulit.includes('Jerawat')" class="form-group">
-                            <label>Dalam sebulan, seberapa sering kamu mengalami masalah jerawat?</label>
-                            <select v-model="formData.frekuensiJerawat">
-                                <option value="1-2" selected >1-2 Kali</option>
-                                <option value="3-4">3-4 Kali</option>
-                                <option value="selalu">Selalu ada jerawat</option>
-                            </select>
-                        </div>
+                    <div v-if="formData.masalahKulit.includes('Jerawat')" class="form-group">
+                        <label>Dalam sebulan, seberapa sering kamu mengalami masalah jerawat?</label>
+                        <select v-model="formData.frekuensiJerawat">
+                            <option value="1-2" selected>1-2 Kali</option>
+                            <option value="3-4">3-4 Kali</option>
+                            <option value="selalu">Selalu ada jerawat</option>
+                        </select>
+                    </div>
+
+                    <div v-if="formData.kondisiKulitTerakhir" class="form-group">
+                        <label>Dalam 4 minggu terakhir, apakah kamu mengalami kondisi kulit berikut</label>
+                        <select v-model="formData.frekuensiJerawat">
+                            <option value="1-2" selected>1-2 Kali</option>
+                            <option value="3-4">3-4 Kali</option>
+                            <option value="selalu">Selalu ada jerawat</option>
+                        </select>
+                    </div>
+
+
+
                 </div>
             </div>
         </TabContent>

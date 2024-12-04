@@ -34,5 +34,19 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
+    'facepp' => [
+        'api_key' => env('FACEPP_API_KEY'),
+        'api_secret' => env('FACEPP_API_SECRET'),
+        'endpoint' => env('FACEPP_ENDPOINT'),
+    ],
+
+    'openai' => [
+        'api_key' => env('ANT_API_KEY'),
+        'endpoint' => env('ANT_ENDPOINT'),
+    ],
+    'whatsapp' => [
+        'api_key' => env('WHATSAPP_API_TOKEN'),
+        'endpoint' => env('ANT_ENDPOINT'),
+    ],
 
 ];

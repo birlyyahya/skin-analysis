@@ -6,10 +6,11 @@ import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { createApp, h } from 'vue';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy';
 
-const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
+
+const appName = import.meta.env.VITE_APP_NAME || 'Skin Analysis';
 
 createInertiaApp({
-    title: (title) => `${title} - ${appName}`,
+    title: (title) => `${title} - Skin Analysis`,
     resolve: (name) =>
         resolvePageComponent(
             `./Pages/${name}.vue`,
